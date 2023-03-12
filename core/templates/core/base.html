@@ -3,12 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>ChatterBot</title>
+        <title>{% block title %}{% endblock %}ChatterBot</title>
 
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="bg-teal-600">
-        ChatterBot
+    <body class="bg-purple-600">
+        <nav class="flex items-center justify-between pt-4 pb-4 bg-purple-800">
+            <div>
+                <a href="/" class="text-xl text-white">ChatterBot</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="/login/" class="text-white hover:text-gray-200">Log In</a>
+
+                <a href="/signup/" class="px-5 py-3 rounded-xl text-white bg-blue-600 hover:bg-blue-700">Sign up</a>
+            </div>
+        </nav>
+
+       {% block content %}
+       {% endblock %}
     </body>
 </html>
