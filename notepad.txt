@@ -1,1 +1,3 @@
 fixing issue in github wiped all my commits must add more as i had over twenty
+
+lg:w-1/4 px-4 mx-auto - width should be a quarter of the screen and padding n stuff
