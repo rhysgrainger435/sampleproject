@@ -13,7 +13,7 @@
             <div class="p-4 bg-white rounded-xl text-center">
                 <h2 class="mb-5 text-2xl font-semibold">{{ room.name }}</h2>
 
-                <a href="#" class="px-5 py-3 rounded-xl text-white bg-green-500 hover:bg-green-700">Join Room</a>
+                <a href="{% url 'room' room.slug %}" class="px-5 py-3 rounded-xl text-white bg-green-500 hover:bg-green-700">Join Room</a>
             </div>
         </div>
     {% endfor %}
