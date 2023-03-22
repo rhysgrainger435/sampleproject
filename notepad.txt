@@ -4,4 +4,4 @@ lg:w-1/4 px-4 mx-auto - width should be a quarter of the screen and padding n st
 
 ell!e2020 - password for test user 
 
-rooms app 29.28 stop 
+29.28
