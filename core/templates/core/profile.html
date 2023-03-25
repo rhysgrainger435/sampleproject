@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Welcome {{user.username}} | {% endblock %}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-white">Welcome, {{ user.username }}!</h1>
+</div>
+<form method="post" class="w-full mt-2 px-4 py-2 rounded-xl">
+    {% csrf_token %}
+    <div class="mb-5">
+        <label class="text-white">Bio</label>
+
+        <input type="text" name="bio" class="w-full lg:w-1/4 px-3 py-3 rounded-xl">
+    </div>
+
+    <button class="px-5 py-3 rounded-xl text-white bg-teal-800 hover:bg-teal-700">Submit</button>
+</form>
+{% endblock %} 

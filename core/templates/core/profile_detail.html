@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Welcome {{user.username}} | {% endblock %}
+
+{% block content %}
+<div class="w-full lg:w-1/4 px-3 py-3 card-body">
+    <h2 class="card-title">{{ user.username }}</h2>
+    <p class="card-text">Bio: {{ profile.bio }}</p>
+</div>
+{% endblock %} 
