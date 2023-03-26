@@ -5,6 +5,9 @@
 {% block content %}
 <div class="w-full lg:w-1/4 px-3 py-3 card-body">
     <h2 class="card-title">{{ user.username }}</h2>
+    <p class="card-text">Age: {{ profile.age }}</p>
+    <p class="card-text">Name: {{ profile.name }}</p>
     <p class="card-text">Bio: {{ profile.bio }}</p>
+
 </div>
 {% endblock %} 

@@ -5,9 +5,22 @@
 {% block content %}
 <div class="p-10 lg:p-20 text-center">
     <h1 class="text-3xl lg:text-6xl text-white">Welcome, {{ user.username }}!</h1>
+    <br><p class="text-xl lg:text-3xl text-white">Please enter extra personalised data from below</p>
 </div>
 <form method="post" class="w-full mt-2 px-4 py-2 rounded-xl">
     {% csrf_token %}
+    <div class="mb-5">
+        <label class="text-white">Age</label>
+
+        <input type="text" name="age" class="w-full lg:w-1/4 px-3 py-3 rounded-xl">
+    </div>
+
+    <div class="mb-5">
+        <label class="text-white">Name</label>
+
+        <input type="text" name="name" class="w-full lg:w-1/4 px-3 py-3 rounded-xl">
+    </div>
+
     <div class="mb-5">
         <label class="text-white">Bio</label>
 
