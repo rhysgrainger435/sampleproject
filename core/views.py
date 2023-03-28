@@ -32,7 +32,7 @@ def profile(request):
         form = ProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-            return redirect(profile)
+            return redirect(profile_details)
     else:
         form = ProfileForm(instance=user_profile)
     return render(request, 'core/profile.html', {'form': form})

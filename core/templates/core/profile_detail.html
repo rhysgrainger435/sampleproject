@@ -3,6 +3,13 @@
 {% block title %}Welcome {{user.username}} | {% endblock %}
 
 {% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl text-white">Welcome, {{ user.username }}!</h1>
+    <br><p class="text-xl lg:text-3xl text-white">Below is your account details, hope you enjoy your experience</p>
+</div>
+
+
+
 <div class="w-full lg:w-1/4 px-3 py-3 card-body">
     <h2 class="card-title">{{ user.username }}</h2>
     <p class="card-text">Age: {{ profile.age }}</p>
