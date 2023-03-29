@@ -79,19 +79,19 @@ class ChatConsumerTestCase(TestCase):
         communicator1 = await self.connect(room.slug)
         communicator2 = await self.connect(room.slug)
 
-        # Send message from first user
+        
         await self.send_message(communicator1, message, user.username, room.slug)
         response = await self.receive_message(communicator1)
         self.assertEqual(response['message'], message)
 
-        # Send message from second user
+        
         await self.send_message(communicator2, message, user.username, room.slug)
         response = await self.receive_message(communicator1)
         self.assertEqual(response['message'], message)
         response = await self.receive_message(communicator2)
         self.assertEqual(response['message'], message)
 
-        # Check if message was saved
+        
         saved_message = Message.objects.last()
         self.assertEqual(saved_message.content, message)
         self.assertEqual(saved_message.user, user)
