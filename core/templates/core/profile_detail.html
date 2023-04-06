@@ -10,11 +10,40 @@
 
 
 
-<div class="w-full lg:w-1/4 px-3 py-3 card-body">
-    <h2 class="card-title">{{ user.username }}</h2>
-    <p class="card-text">Age: {{ profile.age }}</p>
-    <p class="card-text">Name: {{ profile.name }}</p>
-    <p class="card-text">Bio: {{ profile.bio }}</p>
-
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left">
+        <thead class="text-xs text-black uppercase bg-green-500">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Username
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Age
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Bio
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b bg-green-700">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                    {{ user.username }}
+                </th>
+                <td class="px-6 py-4 text-white">
+                    {{ profile.age }}
+                </td>
+                <td class="px-6 py-4 text-white">
+                    {{ profile.name }}
+                </td>
+                <td class="px-6 py-4 text-white">
+                    {{ profile.bio }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 {% endblock %} 

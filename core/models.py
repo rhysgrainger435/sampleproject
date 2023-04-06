@@ -6,3 +6,6 @@ class Profile(models.Model):
     age = models.PositiveIntegerField(null=True, blank=True)
     name = models.TextField(max_length=250, blank=True)
     bio = models.TextField(max_length=500, blank=True)
+    
+    def __str__(self):
+        return self.user.username
